@@ -1,3 +1,5 @@
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
@@ -21,7 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={``}>{children}</body>
+      <body className="flex flex-col flex-nowrap min-h-screen">
+        <Header />
+        <main className="flex flex-col flex-nowrap flex-1 p-6 bg-amber-100">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
