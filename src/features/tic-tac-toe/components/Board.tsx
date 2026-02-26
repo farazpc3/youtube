@@ -15,7 +15,7 @@ export function Board() {
   } = useTicTacToe()
 
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div className="flex flex-col items-center mt-10 shadow-gray-400 shadow-xl border-4 rounded-xl p-4 bg-gray-200">
       <div className="grid grid-cols-3 gap-2">
         {board.map((cell, index) => (
           <Square
